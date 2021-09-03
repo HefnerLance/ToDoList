@@ -27,8 +27,22 @@
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+        <!-- form area -->
+        <div class="col-3"></div>
+        <div class="col-6">
+          <form onsubmit="createList()">
+            <label for="category">List type:</label>
+          <input type="text" name="category" id="category">
+          
+          
+          </form>
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-12" id="lists">
+          <h4>ToDo:</h4>
+          <!-- list inject here -->
         </div>
       </div>
     </div>
