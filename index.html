@@ -24,18 +24,24 @@
       </a>
     </nav>
   </header>
-  <main>
+  <main class="bs-primary">
     <div class="container-fluid">
       <div class="row">
         <!-- form area -->
         <div class="col-3"></div>
         <div class="col-6">
-          <form onsubmit="createList()">
+          <form onsubmit="app.listController.createList()">
             <label for="category">List type:</label>
-          <input type="text" name="category" id="category">
-            <label for="color">Color:</label>
-          <input type="color" name="color" id="color">
-
+          <input type="text" class="form-control" name="listCategory" id="category">
+          <select class="form-select" aria-label="Default select example" name="listColor">
+            <option selected>Open this select menu</option>
+            <option value="bg-danger">Red</option>
+            <option value="Orange">Orange</option>
+            <option value="bg-light">Yellow</option>
+            <option value="bg-primary">Blue</option>
+            <option value="bg-success">Success</option>
+          </select>
+<button type="submit">Okay</button>
           
           </form>
         </div>
@@ -43,8 +49,19 @@
       </div>
       <div class="row">
         <div class="col-12" id="lists">
-          <h4>ToDo:</h4>
+          
           <!-- list inject here -->
+          <!-- <div class="card" style="width: 18rem;">
+            <div class="card-header " id="listCategory">
+              List Category
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">task1</li>
+              <li class="list-group-item">task2</li>
+              <li class="list-group-item">task3</li>
+            </ul>
+          </div> -->
+          
         </div>
       </div>
     </div>
