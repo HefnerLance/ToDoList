@@ -18,8 +18,8 @@ export class List {
        <li class="list-group-item">task1</li>
        <li class="list-group-item">task2</li>
        <li class="list-group-item">task3</li>
+       <form onsubmit="app.taskController.createTask()">
        <button type="submit"> Add Task</button>
-       <form onsubmit="app.TaskController.addTask()">
          <input type="text" name="taskInput">
          </form>
          <button> Delete List </button>

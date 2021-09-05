@@ -9,7 +9,8 @@ class ListService {
 
     createList(listData){
         ProxyState.Lists = [... ProxyState.Lists, new List(listData)]
-        console.log(ProxyState.Lists)    }
+        console.log(ProxyState.Lists)    
+    }
 }
 
 export const listService= new ListService();

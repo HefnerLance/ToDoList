@@ -4,7 +4,7 @@ import { taskController } from "./Controllers/Taskcontroller.js";
 
 class App {
   listController = new ListController();
-  taskcontroller = new taskController();
+  taskController = new taskController();
 
 }
 

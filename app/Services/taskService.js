@@ -1,13 +1,17 @@
 import { ProxyState } from "../AppState.js";
 import { Task } from "../Models/Task.js";
 
-export class taskService {
+export class TaskService {
+    
     constructor(){
-
+        console.log('hello from the task service');
+        
     }
-    addTask(taskData){
-        ProxyState.Tasks= [... ProxyState.Tasks, new Task]
+    newTask(taskData) {
+        debugger
         console.log("add task func", ProxyState.Tasks )
+        ProxyState.Tasks = [... ProxyState.Tasks, new Task]
     }
+    
 }
-export const taskservice = new taskService
+export const taskService = new TaskService();

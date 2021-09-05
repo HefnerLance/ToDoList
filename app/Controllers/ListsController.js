@@ -1,7 +1,7 @@
 import { ProxyState } from "../AppState.js";
 import { List } from "../Models/List.js";
 import { listService } from "../Services/ListService.js";
-import { taskservice } from "../Services/taskService.js";
+import { TaskService } from "../Services/TaskService.js";
 
 
 
@@ -23,10 +23,11 @@ export class ListController {
        
         console.log("List controller")
         ProxyState.on("Lists", _drawList)
+        ProxyState.on ("Tasks",_drawList)
     }
 
     createList(){
-        debugger
+        
         console.log("is this working?")
         event.preventDefault();
         let form = event.target
