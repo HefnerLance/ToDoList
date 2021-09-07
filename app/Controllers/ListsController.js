@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import { List } from "../Models/List.js";
+import { Task } from "../Models/Task.js";
 import { listService } from "../Services/ListService.js";
 import { TaskService } from "../Services/TaskService.js";
 
@@ -12,6 +13,7 @@ function _drawList(){
  let template= ''
  ProxyState.Lists.forEach(l => template += l.Template)
  document.getElementById("lists").innerHTML = template
+
 //  ProxyState.Lists= ProxyState.Lists
 }
 
@@ -22,8 +24,9 @@ export class ListController {
     constructor(){
        
         console.log("List controller")
-        ProxyState.on("Lists", _drawList)
-        ProxyState.on ("Tasks",_drawList)
+        ProxyState.on ("Lists", _drawList)
+        ProxyState.on ("Tasks", _drawList)
+        _drawList()
     }
 
     createList(){
@@ -40,7 +43,17 @@ export class ListController {
         
  
     } 
+    deleteList(listid){
+        listService.deleteList(listid)
 
+    }
+    Alert(listid){
+        var response = confirm("delete?")
+        if( response == true) {
+            this.deleteList(listid)
+        }
+    }
+    
 
    
 }
